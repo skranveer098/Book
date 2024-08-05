@@ -5,7 +5,7 @@ const Shop = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch("https://book-inventory-kappa.vercel.app/api/all-books")
+    fetch("http://localhost:5000/api/all-books")
       .then((res) => res.json())
       .then((data) => setBooks(data))
       .catch((err) => console.log(err));

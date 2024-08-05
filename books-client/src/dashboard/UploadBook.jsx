@@ -58,7 +58,7 @@ const UploadBook = () => {
 
     console.log(bookObj);
 
-    fetch("https://book-inventory-kappa.vercel.app/api/upload-book", {
+    fetch("http://localhost:5000/api/upload-book", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

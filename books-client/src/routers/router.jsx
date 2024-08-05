@@ -41,9 +41,7 @@ const router = createBrowserRouter([
         path: "/book/:id",
         element: <SingleBook />,
         loader: ({ params }) =>
-          fetch(
-            `https://book-inventory-kappa.vercel.app/api/book/${params.id}`
-          ),
+          fetch(`http://localhost:5000/api/book/${params.id}`),
       },
     ],
   },
@@ -71,9 +69,7 @@ const router = createBrowserRouter([
         path: "/admin/dashboard/edit-books/:id",
         element: <EditBooks />,
         loader: ({ params }) =>
-          fetch(
-            `https://book-inventory-kappa.vercel.app/api/book/${params.id}`
-          ),
+          fetch(`http://localhost:5000/api/book/${params.id}`),
       },
     ],
   },

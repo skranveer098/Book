@@ -6,7 +6,7 @@ const ManageBooks = () => {
   const [allBooks, setAllBooks] = useState([]);
 
   useEffect(() => {
-    fetch("https://book-inventory-kappa.vercel.app/api/all-books")
+    fetch("http://localhost:5000/api/all-books")
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched data:", data); // Debugging line
@@ -18,7 +18,7 @@ const ManageBooks = () => {
   // Delete a book
   const handleDelete = (id) => {
     console.log("Deleting book with ID:", id); // Debugging line
-    fetch(`https://book-inventory-kappa.vercel.app/api/book/${id}`, {
+    fetch(`http://localhost:5000/api/book/${id}`, {
       method: "DELETE",
     })
       .then((response) => {
