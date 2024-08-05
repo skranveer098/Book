@@ -5,7 +5,7 @@ const Shop = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/all-books")
+    fetch("https://bookserver-ngrd.onrender.com/api/all-books")
       .then((res) => res.json())
       .then((data) => setBooks(data))
       .catch((err) => console.log(err));

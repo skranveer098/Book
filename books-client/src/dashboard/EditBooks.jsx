@@ -67,7 +67,7 @@ const EditBooks = () => {
     };
 
     //update book data
-    fetch(`http://localhost:5000/api/book/${id}`, {
+    fetch(`https://bookserver-ngrd.onrender.com/api/book/${id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",

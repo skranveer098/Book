@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         path: "/book/:id",
         element: <SingleBook />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/book/${params.id}`),
+          fetch(`https://bookserver-ngrd.onrender.com/api/book/${params.id}`),
       },
     ],
   },
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
         path: "/admin/dashboard/edit-books/:id",
         element: <EditBooks />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/api/book/${params.id}`),
+          fetch(`https://bookserver-ngrd.onrender.com/api/book/${params.id}`),
       },
     ],
   },

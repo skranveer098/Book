@@ -58,7 +58,7 @@ const UploadBook = () => {
 
     console.log(bookObj);
 
-    fetch("http://localhost:5000/api/upload-book", {
+    fetch("https://bookserver-ngrd.onrender.com/api/upload-book", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

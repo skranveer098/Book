@@ -6,7 +6,7 @@ const ManageBooks = () => {
   const [allBooks, setAllBooks] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/all-books")
+    fetch("https://bookserver-ngrd.onrender.com/api/all-books")
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched data:", data); // Debugging line
@@ -18,7 +18,7 @@ const ManageBooks = () => {
   // Delete a book
   const handleDelete = (id) => {
     console.log("Deleting book with ID:", id); // Debugging line
-    fetch(`http://localhost:5000/api/book/${id}`, {
+    fetch(`https://bookserver-ngrd.onrender.com/api/book/${id}`, {
       method: "DELETE",
     })
       .then((response) => {
